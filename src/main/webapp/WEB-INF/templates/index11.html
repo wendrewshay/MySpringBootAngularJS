@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myReverseFilterApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+<script src="../assets/js/todo.js"></script>
+</head>
+<body>
+	<div ng-controller="MyController as Ctrl">
+    <input ng-model="greeting" type="text"><br>
+      未添加过滤器: {{greeting}}<br>
+      逆置: {{greeting|reverse}}<br>
+      逆置 + 大写: {{greeting|reverse:true}}<br>
+      逆置过滤后: {{filterGreeting}}
+    </div>
+</body>
+</html>

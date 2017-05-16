@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+<script src="../assets/js/script3.js"></script>
+<style type="text/css">
+	div.spicy div {
+	  padding: 10px;
+	  border: solid 2px blue;
+	}
+</style>
+</head>
+<body>
+	<div ng-app="scopeInheritance" class="spicy">
+      <div ng-controller="MainCtrl">
+        <p>Good {{timeOfDay}}, {{name}}!</p>
+    
+        <div ng-controller="ChildCtrl">
+          <p>Good {{timeOfDay}}, {{name}} !</p>
+    
+          <div ng-controller="GrandChildCtrl">
+            <p>Good {{timeOfDay}}, {{name}}!</p>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

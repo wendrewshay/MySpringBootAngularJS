@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="form-example1">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.angularjs.org/1.6.4/angular.min.js"></script>
+<script src="../assets/js/script8.js"></script>
+</head>
+<body>
+	<div >
+      <form name="form" class="css-form" novalidate>
+        <div>
+                  大小 (整数 0 - 10):
+          <input type="number" ng-model="size" name="size" min="0" max="10" integer /><br/>
+          <span ng-show="form.size.$error.integer">这是无效的数字!</span>
+          <span ng-show="form.size.$error.min || form.size.$error.max">值必需在0到10之间!</span>
+        </div>
+    
+        <div>
+                 长度 (浮点):
+          <input type="text" ng-model="length" name="length" smartFloat /><br/>
+          <span ng-show="form.length.$error.float">这是无效的浮点数!</span>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

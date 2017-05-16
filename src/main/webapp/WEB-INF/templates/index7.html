@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="spicyApp2">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+<script src="../assets/js/script2.js"></script>
+</head>
+<body>
+	<div ng-controller="SpicyCtrl">
+		<input ng-model="customSpice">
+     	<button ng-click="spicy('chili')">Chili</button>
+     	<button ng-click="spicy(customSpice)">Custom spice</button>
+     	<p>The food is {{spice}} spicy!</p>
+    </div>
+</body>
+</html>
